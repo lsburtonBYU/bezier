@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="using de Casteljau's algorithm to draw cubic Bézier curves">
+  <title>Bézier curves</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+  <div class="buttons">
+    <button class="show">i</button>
+    <button class="pause">p</button>
+    <div>
+      for <em>t</em> ∈ [0,1]<br>
+      <strong><em>Q</em></strong>₀(<em>t</em>) = (1-<em>t</em>)<strong><em>P</em></strong>₀ +
+      <em>t</em><strong><em>P</em></strong>₁<br>
+
+      <strong><em>Q</em></strong>₁(<em>t</em>) = (1-<em>t</em>)<strong><em>P</em></strong>₁ +
+      <em>t</em><strong><em>P</em></strong>₂<br>
+
+      <strong><em>Q</em></strong>₂(<em>t</em>) = (1-<em>t</em>)<strong><em>P</em></strong>₂ +
+      <em>t</em><strong><em>P</em></strong>₃<br>
+
+      <strong><em>R</em></strong>₀(<em>t</em>) = (1-<em>t</em>)<strong><em>Q</em></strong>₀ +
+      <em>t</em><strong><em>Q</em></strong>₁<br>
+
+      <strong><em>R</em></strong>₁(<em>t</em>) = (1-<em>t</em>)<strong><em>Q</em></strong>₁ +
+      <em>t</em><strong><em>Q</em></strong>₂<br>
+
+      <strong><em>B</em></strong>(<em>t</em>) = (1-<em>t</em>)<strong><em>R</em></strong>₀ +
+      <em>t</em><strong><em>R</em></strong>₁
+      <p><a href="https://pomax.github.io/bezierinfo/" target="_blank"><em>A Primer on Bézier Curves</em></a></p>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+</body>
+
+</html>

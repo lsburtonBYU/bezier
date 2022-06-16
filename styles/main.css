@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  user-select: none;
+  width: 16rem;
+}
+
+button {
+  position: relative;
+  pointer-events: auto;
+}
+
+.show {
+  width: 10em;
+}
+
+.pause {
+  width: 4em;
+}
+
+.buttons div {
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  pointer-events: none;
+}
+
+.buttons a {
+  pointer-events: auto;
+}
+
+.buttons p {
+  font-size: 10px;
+}
